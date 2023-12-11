@@ -33,7 +33,6 @@
 'exsn'='Exit-PSSession'
 'fc'='Format-Custom'
 'fl'='Format-List'
-'foreach'='Foreach-Object'
 'ft'='Format-Table'
 'fw'='Format-Wide'
 'gal'='Get-Alias'
