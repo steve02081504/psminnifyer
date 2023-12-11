@@ -29,6 +29,11 @@ $Content = $Content -replace '\.\s*\$', '.$'
 $Content = $Content -replace '\&\s*\$', '&$'
 $Content = $Content -replace '\s*\,\s*', ','
 $Content = $Content -replace '\]\n', ']'
+$AliasTable = & $PSScriptRoot/alias.psd1
+foreach($Alias in $AliasTable.GetEnumerator()){
+	$Content = $Content -replace $Alias.Value, $Alias.Name
+}
+
 if ($OutputFile) {
 	$Content | Out-File $OutputFile -Encoding utf8
 }
