@@ -134,4 +134,5 @@
 'where'='Where-Object'
 'wjb'='Wait-Job'
 'write'='Write-Output'
+'-ea'='-ErrorAction'
 }
