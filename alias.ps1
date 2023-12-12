@@ -69,6 +69,7 @@
 'ipsn'='Import-PSSession'
 'ise'='powershell_ise.exe'
 'iwmi'='Invoke-WMIMethod'
+'iwr'='Invoke-WebRequest'
 'kill'='Stop-Process'
 'lp'='Out-Printer'
 'ls'='Get-ChildItem'
