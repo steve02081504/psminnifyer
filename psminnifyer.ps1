@@ -37,7 +37,7 @@ $Content = $Content -ireplace "\-($CommandJoiner)\s+([0-9\-+])", '-$1$2'
 $AliasTable = . $PSScriptRoot/alias.ps1
 
 $AliasTable.GetEnumerator() | ForEach-Object {
-	$Content = $Content -iReplace $_.Value, $_.Name
+	$Content = $Content -iReplace $_.Name, $_.Value
 }
 
 if ($OutputFile) { $Content | Out-File $OutputFile -Encoding utf8 }
