@@ -30,7 +30,7 @@ $Content = $Content -replace '\&\s*\$', '&$'
 $Content = $Content -replace '\s*\,\s*', ','
 $CommandJoiner = "as|and|cas|ccontains|ceq|cge|cgt|cin|cis|ciscontains|cislike|cisnot|cisnotcontains|cisnotin|cisnotlike|cisnotnull|cisnull|cjoin|cle|clike|clt|cmatch|cne|cnotcontains|cnotin|cnotlike|cnotmatch|contains|creplace|csplit|eq|ge|gt|ias|icontains|ieq|ige|igt|iin|iis|iiscontains|iisin|iislike|iisnot|iisnotcontains|iisnotin|iisnotlike|iisnotnull|iisnull|ijoin|ile|ilike|ilt|imatch|in|ine|inotcontains|inotin|inotlike|inotmatch|ireplace|is|iscontains|isin|islike|isnot|isnotcontains|isnotin|isnotlike|isnotnull|isnull|isplit|join|le|like|lt|match|ne|not|notcontains|notin|notlike|notmatch|replace|split"
 $Content = $Content -ireplace "\-($CommandJoiner)\s+(\""|\'|\@|\[|\{|\$|\()", '-$1$2'
-$Content = $Content -ireplace "([a-zA-Z_])\s+\-($CommandJoiner)", '$1-$2'
+$Content = $Content -ireplace "([a-zA-Z_])\s+\-(($CommandJoiner)[^a-zA-Z_]])", '$1-$2'
 $Content = $Content -ireplace "\-($CommandJoiner)\s+([0-9\-+])", '-$1$2'
 
 $AliasTable = . $PSScriptRoot/alias.ps1
